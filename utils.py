@@ -47,14 +47,10 @@ def guess_the_color_from_the_number(number):
     subjects = [x for x in subjects if x not in green_lst]
     red_lst = subjects
 
-    for color in blue_lst:
-        color_subjects_dict.setdefault(color, "blue")
-    for color in green_lst:
-        color_subjects_dict.setdefault(color, "green")
-    for color in red_lst:
-        color_subjects_dict.setdefault(color, "red")
+    color_subjects_dict.setdefault(tuple(blue_lst), "blue")
+    color_subjects_dict.setdefault(tuple(green_lst), "green")
+    color_subjects_dict.setdefault(tuple(red_lst), "red")
 
-    color_subjects_dict = dict(sorted(color_subjects_dict.items()))
-    return color_subjects_dict[number]
-
-
+    for subjects, color in color_subjects_dict.items():
+        if number in subjects:
+            return color
