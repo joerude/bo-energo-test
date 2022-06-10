@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Тестовое задание в БО-ЭНЕРГО</title>
+    {#    <link rel="shortcut icon" href="https://pics.freeicons.io/uploads/icons/png/16416553521649829356-512.png"#}
+    {#          type="image/x-icon"/>  #}
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/x-icon"/>
+
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Второе задание</h2>
+    <p>Есть группа из 100 предметов. Предметы могут быть синего, зелёного и красного цвета.
+        Известно, что предметов синего цвета сильно больше, чем предметов зелёного цвета,
+        а предметов зелёного цвета немного больше, чем предметов красного цвета.
+        Напишите сервис, который будет принимать номер предмета и пытаться угадать его цвет.</p>
+
+
+    <form method="POST">
+        <p>Пожалуйста, введите любое число от 1 до 100:</p>
+        <label><input type="text" placeholder="число" name="number"/></label>
+        <label><input type="submit" value="Найти" placeholder="c" name="c"/></label>
+    </form>
+
+</body>
+</html>
