@@ -47,8 +47,17 @@ cd bo-energo-test
 pip install -r requirements.txt
 ```
 
-Запустите:
+### Запустите:
 `python app.py`
 
-Затем перейдите на свой локальный сервер 
+
+  
+### Запуск через Docker:
+  ```
+  docker build --tag python-docker .    
+  docker run -d -p 5000:5000 python-docker
+  ```
+  
+  Затем перейдите на свой локальный сервер 
 (http://127.0.0.1:5000/)
+  
